@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Property Market Analysis | Pre & Post COVID Insights | Garry Singh Real Estate</title>
+    <meta name="description" content="Independent analysis of New Zealand and Auckland property markets pre and post COVID-19. Expert insights on ensuring compliance and making informed property buying decisions.">
+    <meta name="author" content="Garry Singh Real Estate">
+    <link rel="canonical" href="https://www.garryrealestate.co.nz/market-analysis.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --navy-deep: #1e3c72;
+            --royal-blue: #2a5298;
+            --steel-blue: #7e8ba3;
+            --gold-accent: #ffd700;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logo-container:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            position: relative;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover .logo-icon {
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+            transform: scale(1.05);
+        }
+
+        .logo-icon::before {
+            content: 'G';
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -2px;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ffd700;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo-name {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.8px;
+            line-height: 1;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .logo-tagline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 2px;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L50 50L0 100L50 100L100 50L50 0Z" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .hero .date {
+            font-size: 14px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        /* Article Content */
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .disclaimer-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ffd700;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .disclaimer-box h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .disclaimer-box p {
+            color: #856404;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer-box strong {
+            color: #533f03;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--navy-deep);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--gold-accent);
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--royal-blue);
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        .article-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .stat-highlight {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 5px solid var(--royal-blue);
+        }
+
+        .stat-highlight h4 {
+            color: var(--navy-deep);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .checklist-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 5px solid #28a745;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .checklist-box h4 {
+            color: #155724;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .checklist-box ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist-box li {
+            position: relative;
+            padding-left: 30px;
+            color: #155724;
+        }
+
+        .checklist-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border-left: 5px solid #dc3545;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .warning-box h4 {
+            color: #721c24;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .warning-box p, .warning-box li {
+            color: #721c24;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border-left: 5px solid #17a2b8;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .info-box h4 {
+            color: #0c5460;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .info-box p, .info-box li {
+            color: #0c5460;
+        }
+
+        /* Data Sources */
+        .sources-section {
+            background: var(--bg-light);
+            padding: 30px;
+            margin-top: 50px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .sources-section h3 {
+            color: var(--navy-deep);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .sources-section p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .sources-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .sources-section li {
+            font-size: 14px;
+            color: var(--text-light);
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .sources-section li:last-child {
+            border-bottom: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-section .btn {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .cta-section .btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer h3, .footer h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .article-container {
+                padding: 40px 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-name">Garry Singh</div>
+                    <div class="logo-tagline">Your Key to Home</div>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#properties">Properties</a></li>
+                <li><a href="market-analysis.html">Market Analysis</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Zealand Property Market Analysis</h1>
+            <p>Understanding the Pre-COVID and Post-COVID Property Landscape</p>
+            <p class="date"><i class="far fa-calendar-alt"></i> Updated: November 2024</p>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <!-- Disclaimer -->
+        <div class="disclaimer-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> Important Legal Disclaimer</h3>
+            <p><strong>This article is provided for general informational and educational purposes only.</strong> It does not constitute financial, investment, legal, or professional advice. The information presented is based on publicly available data from reputable sources including the Real Estate Institute of New Zealand (REINZ), Reserve Bank of New Zealand (RBNZ), CoreLogic, and other recognized institutions as of November 2024.</p>
+            <p><strong>No Guarantees:</strong> Past performance is not indicative of future results. Property markets are subject to numerous variables including economic conditions, government policy, interest rates, and local factors that cannot be predicted with certainty.</p>
+            <p><strong>Independent Advice:</strong> Before making any property purchase or investment decision, you must seek independent advice from qualified professionals including licensed real estate agents, solicitors, registered valuers, building inspectors, and financial advisors who can assess your specific circumstances.</p>
+            <p><strong>Due Diligence:</strong> This article discusses general due diligence practices but does not replace the need for comprehensive professional inspections, legal reviews, and compliance checks specific to any property you are considering.</p>
+            <p><strong>No Liability:</strong> Neither Garry Singh Real Estate nor the author accepts any liability for decisions made based on information in this article. All property transactions carry inherent risks, and readers are solely responsible for their own decisions and outcomes.</p>
+        </div>
+
+        <div class="article-content">
+            <!-- Introduction -->
+            <p>The New Zealand property market has experienced unprecedented changes over the past five years, navigating through the COVID-19 pandemic, emergency-level interest rates, record price growth, and subsequent market corrections. Understanding these dynamics is crucial for anyone looking to buy property in New Zealand, particularly in the Auckland market, which represents approximately one-third of the nation's housing activity.</p>
+
+            <p>This independent analysis examines the key trends, challenges, and opportunities in the New Zealand property market, with a specific focus on Auckland, and provides guidance on ensuring your property purchase is sound, compliant, and right for your needs.</p>
+
+            <!-- Pre-COVID Market -->
+            <h2>The Pre-COVID Property Market (2018-2020)</h2>
+
+            <h3>National Market Conditions</h3>
+            <p>In the years leading up to COVID-19, New Zealand's property market was characterized by steady but modest growth after years of rapid appreciation. By 2019, the national median house price had exceeded $700,000, representing nearly a three-fold increase from 2000 levels.</p>
+
+            <div class="stat-highlight">
+                <h4><i class="fas fa-chart-line"></i> Key Pre-COVID Statistics (2018-2019)</h4>
+                <ul>
+                    <li><strong>National Median Price (2019):</strong> Approximately $700,000+</li>
+                    <li><strong>Market Sentiment:</strong> Stable with moderate growth expectations</li>
+                    <li><strong>Interest Rates:</strong> OCR around 1.00-1.75% (considered low at the time)</li>
+                    <li><strong>Sales Volumes:</strong> Steady transaction activity with typical seasonal variations</li>
+                </ul>
+            </div>
+
+            <h3>Auckland Market Specifics (2018-2020)</h3>
+            <p>Auckland experienced a notably different trajectory compared to the national market. After years of rapid price appreciation that saw median prices exceed $1 million in numerous suburbs, the Auckland market entered a period of consolidation and relative stagnation.</p>
+
+            <div class="stat-highlight">
+                <h4><i class="fas fa-home"></i> Auckland Pre-COVID Timeline</h4>
+                <ul>
+                    <li><strong>2017:</strong> Median price peaked at $851,000</li>
+                    <li><strong>2018-2019:</strong> Market remained essentially flat at $850,000 median for approximately 2.5 years</li>
+                    <li><strong>Early 2020 (Pre-COVID):</strong> Signs of recovery emerging</li>
+                    <li><strong>March 2020:</strong> Median reached $950,000 (11.1% year-on-year increase) just before COVID-19 lockdowns</li>
+                </ul>
+            </div>
+
+            <p>This pre-COVID data revealed an Auckland market that had cooled significantly after earlier overheating, with affordability concerns, tighter lending restrictions, and changing migration patterns all contributing to the plateau. The early 2020 recovery suggested renewed buyer confidence and improving market conditions.</p>
+
+            <h3>Market Drivers Pre-COVID</h3>
+            <p>Several factors influenced the New Zealand property market in the 2018-2020 period:</p>
+
+            <ul>
+                <li><strong>Loan-to-Value Ratio (LVR) Restrictions:</strong> Reserve Bank regulations requiring larger deposits cooled speculative activity</li>
+                <li><strong>Foreign Buyer Restrictions:</strong> The Overseas Investment Amendment Act 2018 restricted foreign property purchases</li>
+                <li><strong>Construction Activity:</strong> Increased housing supply, particularly in Auckland, helped moderate price growth</li>
+                <li><strong>Economic Stability:</strong> Steady employment and modest wage growth supported housing demand</li>
+                <li><strong>Interest Rates:</strong> Relatively low rates supported borrowing capacity, though not at emergency levels</li>
+                <li><strong>Population Growth:</strong> Migration contributed to housing demand, particularly in main centers</li>
+            </ul>
+
+            <!-- COVID Impact -->
+            <h2>The COVID-19 Turning Point (March 2020 - 2021)</h2>
+
+            <h3>Emergency Response and Market Impact</h3>
+            <p>When COVID-19 struck in March 2020, the Reserve Bank of New Zealand (RBNZ) implemented unprecedented monetary policy measures. The Official Cash Rate (OCR) was slashed by 0.75 percentage points to an historic low of 0.25%, with the commitment to maintain this emergency level for at least 12 months. Additionally, the RBNZ implemented the Large-Scale Asset Purchase (LSAP) programme and Funding for Lending Programme to inject liquidity into the financial system.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-percent"></i> Interest Rate Response</h4>
+                <p><strong>RBNZ Actions (March 2020):</strong></p>
+                <ul>
+                    <li>OCR reduced from 1.00% to 0.25% (emergency level)</li>
+                    <li>Two-year fixed mortgage rates fell below 3% - the lowest residential mortgage rates in modern New Zealand history</li>
+                    <li>Commitment to maintain emergency settings for extended period</li>
+                    <li>Additional monetary stimulus through asset purchase programmes</li>
+                </ul>
+            </div>
+
+            <h3>The Unprecedented Boom (Mid-2020 to Late 2021)</h3>
+            <p>The combination of ultra-low interest rates, limited housing supply, government support measures, and changing lifestyle preferences triggered an extraordinary property market surge. Rather than the feared COVID-induced property crash, New Zealand experienced one of the most dramatic housing booms in its history.</p>
+
+            <div class="stat-highlight">
+                <h4><i class="fas fa-rocket"></i> The COVID Boom Statistics</h4>
+                <ul>
+                    <li><strong>National Growth:</strong> Valocity Value Index increased by 41% between March 2020 and February 2022</li>
+                    <li><strong>Auckland Growth:</strong> Prices peaked in November 2021, rising approximately 10% from December 2019 levels (significantly underperforming the national market)</li>
+                    <li><strong>Peak Effective Mortgage Rate:</strong> Borrowers were paying just 2.8% by Q3-2021 - historic lows</li>
+                    <li><strong>Record Prices:</strong> March 2020 saw 20.0% of Auckland properties sell for $1 million+ (highest percentage since 1992)</li>
+                </ul>
+            </div>
+
+            <h3>Why the Boom Occurred</h3>
+            <p>Several interconnected factors drove this remarkable market surge:</p>
+
+            <ol>
+                <li><strong>Extreme Affordability of Debt:</strong> With mortgage rates below 3%, borrowing capacity increased dramatically for those with deposits and stable income</li>
+                <li><strong>Fear of Missing Out (FOMO):</strong> Rapidly rising prices created urgency among buyers concerned about being priced out permanently</li>
+                <li><strong>Limited Supply:</strong> Construction delays, supply chain disruptions, and regulatory constraints limited new housing availability</li>
+                <li><strong>Lifestyle Shifts:</strong> Work-from-home capabilities and lifestyle reassessment drove demand for larger properties</li>
+                <li><strong>Savings Accumulation:</strong> Reduced spending during lockdowns enabled some households to save larger deposits</li>
+                <li><strong>Investment Demand:</strong> Investors sought property as a hedge against inflation and economic uncertainty</li>
+                <li><strong>Relaxed LVR Requirements:</strong> Temporary removal of LVR restrictions in 2020 increased borrowing capacity</li>
+            </ol>
+
+            <!-- Post-COVID Correction -->
+            <h2>The Post-Boom Correction (2022-2023)</h2>
+
+            <h3>The Policy Response</h3>
+            <p>As inflation surged globally and domestically, the RBNZ was forced to rapidly reverse its emergency settings. Between August 2021 and May 2023, the OCR was lifted incrementally from 0.25% to 5.50% - one of the fastest tightening cycles in RBNZ history.</p>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-chart-line-down"></i> The Interest Rate Reversal</h4>
+                <ul>
+                    <li><strong>OCR Peak:</strong> 5.50% by May 2023 (up from 0.25% emergency level)</li>
+                    <li><strong>Mortgage Rate Impact:</strong> Effective mortgage rates reached 4.7% by Q1-2023 (up from 2.8% low)</li>
+                    <li><strong>Many homeowners faced mortgage payment increases of 60-80% as fixed-rate mortgages rolled off emergency-era rates</strong></li>
+                    <li><strong>Borrowing capacity significantly reduced, limiting buyer purchasing power</strong></li>
+                </ul>
+            </div>
+
+            <h3>Market Correction and Stabilization</h3>
+            <p>The rapid interest rate increases had the intended cooling effect on the property market, though the impact varied significantly by region.</p>
+
+            <div class="stat-highlight">
+                <h4><i class="fas fa-arrow-down"></i> Correction Statistics (2022-2023)</h4>
+                <ul>
+                    <li><strong>Auckland Decline:</strong> Property values fell 22.19% from November 2021 peak - the largest correction of any major region</li>
+                    <li><strong>National Decline:</strong> Real house prices fell nearly back to pre-pandemic (early 2020) levels - a 16.7% decline in REINZ HPI from 2021 peak</li>
+                    <li><strong>Year-on-Year Peak Decline:</strong> Auckland recorded 18.1% annual decline to November 2022 (compared to 26.2% growth the previous year)</li>
+                    <li><strong>Transaction Volumes:</strong> Sales activity declined sharply as buyers and sellers adjusted to new market realities</li>
+                </ul>
+            </div>
+
+            <h3>Regional Variations</h3>
+            <p>Auckland's correction was notably more severe than most other regions, reflecting several factors:</p>
+
+            <ul>
+                <li><strong>Higher Price Point:</strong> Auckland's premium pricing made it more sensitive to affordability constraints</li>
+                <li><strong>Economic Headwinds:</strong> Job losses and economic uncertainty particularly impacted the main employment center</li>
+                <li><strong>Migration Changes:</strong> Both international and internal migration patterns shifted</li>
+                <li><strong>Investor Retreat:</strong> Policy changes targeting investors (interest deductibility rules) disproportionately affected Auckland</li>
+            </ul>
+
+            <!-- Current Market -->
+            <h2>Current Market Conditions (Late 2024)</h2>
+
+            <h3>Market Stabilization</h3>
+            <p>By the latter half of 2024, the New Zealand property market showed signs of stabilization after the significant 2022-2023 correction. While challenges remain, market conditions have become more balanced between buyers and sellers.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-balance-scale"></i> 2024 Market Snapshot</h4>
+                <ul>
+                    <li><strong>National Median:</strong> National house prices fell approximately 5% since February 2024</li>
+                    <li><strong>Auckland Median (September 2024):</strong> Approximately $970,000 - $1.04 million depending on source and timing</li>
+                    <li><strong>Interest Rates:</strong> OCR beginning to decline from peak levels, with further reductions anticipated</li>
+                    <li><strong>Transaction Activity:</strong> Sales volumes remain below historical averages but showing modest improvement</li>
+                    <li><strong>Market Sentiment:</strong> Cautiously optimistic as interest rate pressures ease</li>
+                </ul>
+            </div>
+
+            <h3>Auckland-Specific Conditions</h3>
+            <p>Auckland's market in late 2024 remains characterized by:</p>
+
+            <ul>
+                <li><strong>Below-Peak Pricing:</strong> Values remain approximately 22% below the November 2021 peak</li>
+                <li><strong>Buyer's Market Conditions:</strong> Increased listings and choice for purchasers</li>
+                <li><strong>Negotiating Opportunities:</strong> Sellers more willing to negotiate, particularly for properties requiring extended marketing periods</li>
+                <li><strong>Variable Performance by Suburb:</strong> Significant variation between high-demand areas and less desirable locations</li>
+                <li><strong>Quality Premium:</strong> Well-presented, modern, compliant properties achieving significantly better results than properties with deferred maintenance or compliance issues</li>
+            </ul>
+
+            <!-- Market Outlook -->
+            <h2>Market Outlook (2025 and Beyond)</h2>
+
+            <h3>Expert Forecasts for 2025</h3>
+            <p>Major financial institutions, research firms, and economists are forecasting modest to moderate growth for the New Zealand property market in 2025, driven primarily by anticipated interest rate reductions.</p>
+
+            <div class="stat-highlight">
+                <h4><i class="fas fa-crystal-ball"></i> 2025 Growth Forecasts</h4>
+                <ul>
+                    <li><strong>ASB Bank:</strong> 9.4% growth (most optimistic forecast)</li>
+                    <li><strong>Westpac:</strong> 8.0% growth</li>
+                    <li><strong>ANZ:</strong> 6.0% growth in 2025, followed by 5.0% in 2026</li>
+                    <li><strong>Kiwibank:</strong> 5-7% growth range</li>
+                    <li><strong>CoreLogic:</strong> Approximately 5% annual growth with 10% increase in transaction volumes (approximately 90,000 transactions)</li>
+                </ul>
+            </div>
+
+            <p><strong>Important Note:</strong> These forecasts represent professional opinions based on current data and assumptions. They are not guarantees, and actual market performance may differ significantly due to unforeseen economic, political, or social factors.</p>
+
+            <h3>Key Growth Drivers for 2025</h3>
+            <ol>
+                <li><strong>Falling Interest Rates:</strong> OCR reductions flowing through to lower mortgage rates, improving affordability</li>
+                <li><strong>Improved Borrowing Capacity:</strong> Lower rates enabling buyers to borrow more for the same repayment amount</li>
+                <li><strong>Pent-Up Demand:</strong> Buyers who postponed purchases during the correction period re-entering the market</li>
+                <li><strong>Limited New Supply:</strong> Construction sector challenges limiting new housing completions</li>
+                <li><strong>Migration Pressures:</strong> Continued population growth creating underlying housing demand</li>
+            </ol>
+
+            <h3>Potential Headwinds</h3>
+            <p>Several factors may moderate or constrain growth:</p>
+
+            <ul>
+                <li><strong>Economic Uncertainty:</strong> Elevated unemployment and economic concerns may limit buyer confidence</li>
+                <li><strong>Affordability Constraints:</strong> Despite price corrections, housing remains expensive relative to incomes, particularly in Auckland</li>
+                <li><strong>High Listings:</strong> Increased inventory provides buyers with choice, limiting rapid price appreciation</li>
+                <li><strong>Debt Servicing Concerns:</strong> Some households may struggle with existing mortgage commitments despite rate reductions</li>
+                <li><strong>Political and Regulatory Changes:</strong> Policy adjustments could impact market dynamics</li>
+            </ul>
+
+            <!-- Buying Guide -->
+            <h2>Ensuring Your Property Purchase is the Right One</h2>
+
+            <h3>The Importance of Due Diligence</h3>
+            <p>Whether you're a first-time buyer, upgrading, downsizing, or investing, conducting comprehensive due diligence is essential to making a sound property purchase decision. In New Zealand's complex property market, failing to properly investigate a property can result in significant financial, legal, and practical problems.</p>
+
+            <p>The following sections outline the critical steps and considerations for New Zealand property buyers.</p>
+
+            <h3>Understanding Your Financial Position</h3>
+            <p>Before beginning your property search, establish a clear understanding of your financial capacity and constraints:</p>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-money-check-alt"></i> Financial Preparation Checklist</h4>
+                <ul>
+                    <li><strong>Pre-Approval:</strong> Obtain mortgage pre-approval to understand your maximum borrowing capacity</li>
+                    <li><strong>Deposit Verification:</strong> Confirm available funds for deposit (typically 20% minimum) plus additional costs</li>
+                    <li><strong>Additional Costs:</strong> Budget for legal fees ($1,500-$3,000+), LIM reports ($200-$400), building inspections ($500-$1,500+), and moving costs</li>
+                    <li><strong>Ongoing Costs:</strong> Calculate mortgage repayments, rates, insurance, and maintenance at current AND potentially higher interest rates</li>
+                    <li><strong>Stress Testing:</strong> Ensure affordability if interest rates increase by 2-3% from current levels</li>
+                    <li><strong>Professional Advice:</strong> Consult with a mortgage broker or financial advisor about structuring your financing optimally</li>
+                </ul>
+            </div>
+
+            <h3>Location and Property Type Research</h3>
+            <p>Understanding the specific characteristics of different locations and property types is crucial:</p>
+
+            <ul>
+                <li><strong>Transport Links:</strong> Proximity to employment, schools, and amenities</li>
+                <li><strong>Future Development:</strong> Planned infrastructure, zoning changes, and area development</li>
+                <li><strong>Local Market Trends:</strong> Recent sales data, days on market, and price trends for the specific suburb</li>
+                <li><strong>School Zones:</strong> If relevant, verify school zone boundaries (which can significantly impact values)</li>
+                <li><strong>Natural Hazards:</strong> Flood zones, landslip risk, earthquake risk, and coastal erosion potential</li>
+                <li><strong>Property Type Considerations:</strong> Understand the specific characteristics, maintenance requirements, and market dynamics for your chosen property type (standalone house, townhouse, apartment, etc.)</li>
+            </ul>
+
+            <!-- Compliance Section -->
+            <h2>Ensuring No Compliance Issues: Essential Due Diligence</h2>
+
+            <p>Compliance issues represent one of the most significant risks in New Zealand property purchases. Properties with unconsented work, missing documentation, or code violations can result in difficulties with insurance, reduced resale value, legal liability, and costly remediation requirements.</p>
+
+            <h3>1. Land Information Memorandum (LIM) Report</h3>
+            <p>The LIM report is THE essential compliance document for New Zealand property buyers. Prepared by the local council, it provides comprehensive information about the property and land as held in council records.</p>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-file-alt"></i> What a LIM Report Contains</h4>
+                <ul>
+                    <li><strong>Building Consents:</strong> All building consents issued for the property, including dates and descriptions of work</li>
+                    <li><strong>Code Compliance Certificates (CCC):</strong> Confirmation that consented work was completed to required standards</li>
+                    <li><strong>Certificates of Acceptance (COA):</strong> Alternative certification for unconsented work (less desirable than CCC)</li>
+                    <li><strong>Property Files:</strong> Additional documentation and correspondence held by council</li>
+                    <li><strong>Zoning Information:</strong> Current zoning, permitted uses, and any restrictions or overlays</li>
+                    <li><strong>Natural Hazards:</strong> Flooding, landslip, erosion, or other hazard classifications</li>
+                    <li><strong>Services:</strong> Stormwater, sewage, water supply connections and infrastructure</li>
+                    <li><strong>Rates:</strong> Any outstanding rates or charges against the property</li>
+                    <li><strong>Notices:</strong> Building notices, requisitions, or enforcement actions</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-circle"></i> Critical LIM Review Points</h4>
+                <ul>
+                    <li><strong>Match Physical to Consents:</strong> Verify that what you see physically matches what was consented - look for extensions, decks, sleepouts, garages, or renovations that may lack proper consents</li>
+                    <li><strong>CCC Verification:</strong> Ensure ALL building consents have corresponding Code Compliance Certificates - missing CCCs indicate incomplete or non-compliant work</li>
+                    <li><strong>Timeline Consistency:</strong> Check that consent dates align with property age and condition claims</li>
+                    <li><strong>Hazard Flags:</strong> Carefully review any natural hazard notations - these can affect insurance, mortgageability, and future property values</li>
+                    <li><strong>Outstanding Issues:</strong> Identify any notices, requisitions, or unresolved matters requiring attention</li>
+                </ul>
+            </div>
+
+            <h3>2. Professional Building Inspection</h3>
+            <p>While not legally required, a professional pre-purchase building inspection is strongly recommended for all New Zealand property purchases. These inspections must meet NZS 4306:2005 standard.</p>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-hard-hat"></i> Building Inspection Coverage</h4>
+                <ul>
+                    <li><strong>Structural Integrity:</strong> Foundation, framing, weathertightness, and structural soundness</li>
+                    <li><strong>Weathertightness:</strong> Critical in New Zealand's climate - checking for water ingress, proper cladding, and building envelope integrity</li>
+                    <li><strong>Moisture Levels:</strong> Using moisture meters to detect hidden water damage or ongoing leaks</li>
+                    <li><strong>Roof Condition:</strong> Roofing material condition, flashing, gutters, and expected remaining life</li>
+                    <li><strong>Plumbing Systems:</strong> Water supply, waste water, hot water systems, and potential issues</li>
+                    <li><strong>Electrical Systems:</strong> Wiring condition, switchboard, compliance with current standards</li>
+                    <li><strong>Drainage:</strong> Surface water management and foundation drainage</li>
+                    <li><strong>Insulation and Ventilation:</strong> Compliance with healthy homes standards (for rental properties)</li>
+                    <li><strong>Visible Pests:</strong> Evidence of borer, rot, or other timber pests</li>
+                    <li><strong>Compliance Observations:</strong> Noting any obvious unconsented or non-compliant work</li>
+                </ul>
+            </div>
+
+            <p><strong>Important:</strong> Engage a qualified, experienced, and insured building inspector. Preferably choose someone with local knowledge of construction types and common issues in your target area. Auckland properties, for example, may require specific expertise in weathertightness issues due to the leaky building crisis.</p>
+
+            <h3>3. Title Search and Legal Review</h3>
+            <p>Your lawyer or conveyancer will conduct a title search through Land Information New Zealand (LINZ), revealing critical legal information about the property.</p>
+
+            <div class="info-box">
+                <h4><i class="fas fa-scroll"></i> Title Search Reveals</h4>
+                <ul>
+                    <li><strong>Legal Ownership:</strong> Confirmation of current registered owner(s)</li>
+                    <li><strong>Title Type:</strong> Freehold, leasehold, cross-lease, unit title, or other arrangements</li>
+                    <li><strong>Easements:</strong> Rights of way, access rights, or utility easements affecting the property</li>
+                    <li><strong>Covenants:</strong> Restrictions on property use, building, or modifications</li>
+                    <li><strong>Encumbrances:</strong> Mortgages, liens, or other charges against the property</li>
+                    <li><strong>Boundary Information:</strong> Official boundary descriptions and potential boundary issues</li>
+                </ul>
+            </div>
+
+            <h3>4. Specific Compliance Considerations</h3>
+
+            <h4>Building Consent and Code Compliance Verification</h4>
+            <p>This is arguably the most critical compliance aspect for New Zealand property buyers:</p>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-clipboard-check"></i> Consent Compliance Checklist</h4>
+                <ul>
+                    <li><strong>Extensions and Additions:</strong> Verify that any building extensions, additional bedrooms, sleepouts, or structural modifications have proper consents and CCCs</li>
+                    <li><strong>Deck and Outdoor Structures:</strong> Even decks above a certain height require consents - ensure compliance</li>
+                    <li><strong>Garage Conversions:</strong> Converting garages to living spaces requires consent - unconsented conversions are common and problematic</li>
+                    <li><strong>Plumbing and Drainage:</strong> Major plumbing or drainage work requires consent</li>
+                    <li><strong>Electrical Work:</strong> Significant electrical work requires certification from qualified electricians</li>
+                    <li><strong>Weatherproofing and Re-cladding:</strong> Any re-cladding or weatherproofing work (especially relevant for leaky building remediation) must be properly consented</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-ban"></i> Unconsented Work: Serious Implications</h4>
+                <p><strong>Discovering unconsented work can have severe consequences:</strong></p>
+                <ul>
+                    <li><strong>Insurance Issues:</strong> Insurance companies may refuse to cover unconsented structures or modifications, leaving you personally liable</li>
+                    <li><strong>Resale Difficulties:</strong> Future buyers and their banks may refuse to proceed with unconsented work present</li>
+                    <li><strong>Remediation Costs:</strong> You may be required to remove, modify, or retrospectively consent work at significant expense</li>
+                    <li><strong>Council Enforcement:</strong> Councils can issue notices requiring work to be brought into compliance or removed</li>
+                    <li><strong>Legal Liability:</strong> If unconsented work causes problems (structural failure, fire, injury), you may face legal liability</li>
+                    <li><strong>Reduced Property Value:</strong> Properties with compliance issues typically sell for significantly less than comparable compliant properties</li>
+                </ul>
+                <p><strong>If you discover unconsented work during your due diligence, seek specific legal advice about your options, including negotiating price reductions, requiring the vendor to remedy issues, or walking away from the purchase.</strong></p>
+            </div>
+
+            <h4>Weathertightness and Leaky Building Issues</h4>
+            <p>New Zealand experienced a significant "leaky building crisis" particularly affecting buildings constructed between 1992-2004. Properties from this era warrant additional scrutiny:</p>
+
+            <ul>
+                <li><strong>High-Risk Construction:</strong> Monolithic cladding systems without cavities, flat roofs, and Mediterranean-style designs are particularly vulnerable</li>
+                <li><strong>Remediation History:</strong> If the property has been remediated, verify proper consents, CCCs, and scope of work</li>
+                <li><strong>Warranties and Guarantees:</strong> Check for any remaining weathertightness warranties</li>
+                <li><strong>Specialist Inspections:</strong> Consider engaging weathertightness specialists for high-risk properties</li>
+                <li><strong>Financial Impact:</strong> Remediation can cost hundreds of thousands of dollars - understand your exposure</li>
+            </ul>
+
+            <h4>Earthquake Strengthening (Particularly Relevant in Wellington and Canterbury)</h4>
+            <p>For buildings in earthquake-prone areas, particularly commercial or multi-unit residential buildings:</p>
+
+            <ul>
+                <li><strong>Seismic Ratings:</strong> Understand the building's earthquake rating as percentage of New Building Standard (NBS)</li>
+                <li><strong>Strengthening Requirements:</strong> Buildings below 34% NBS in specific categories may require strengthening</li>
+                <li><strong>Timeline and Costs:</strong> Clarify any earthquake strengthening obligations and timeframes</li>
+                <li><strong>Body Corporate Implications:</strong> For unit titles, understand levies or planned work for earthquake strengthening</li>
+            </ul>
+
+            <h3>5. Additional Important Checks</h3>
+
+            <h4>Insurance Verification</h4>
+            <ul>
+                <li><strong>Insurability Confirmation:</strong> Before committing to purchase, obtain written confirmation from insurers that the property is insurable at reasonable premiums</li>
+                <li><strong>Hazard Disclosures:</strong> Some properties in flood zones or hazard areas may be uninsurable or extremely expensive to insure</li>
+                <li><strong>Building Materials:</strong> Certain cladding types or materials may attract higher premiums or be difficult to insure</li>
+            </ul>
+
+            <h4>Healthy Homes Standards (For Investment Properties)</h4>
+            <p>If purchasing as an investment property for rental, ensure compliance with Healthy Homes Standards requiring:</p>
+
+            <ul>
+                <li>Adequate insulation in ceilings and underfloor areas</li>
+                <li>Efficient heating capable of warming the main living area to 18°C</li>
+                <li>Adequate ventilation in all habitable rooms</li>
+                <li>Effective drainage to reduce dampness and moisture</li>
+                <li>Draught stopping for windows and doors</li>
+            </ul>
+
+            <h4>Chattels and Fixtures</h4>
+            <ul>
+                <li><strong>Sale Agreement Clarity:</strong> Clearly specify all fixtures and chattels included or excluded from the sale</li>
+                <li><strong>Appliance Condition:</strong> Test all included appliances and confirm working condition</li>
+                <li><strong>Final Pre-Settlement Inspection:</strong> Conduct a final inspection before settlement to verify property condition and included items</li>
+            </ul>
+
+            <!-- Action Plan -->
+            <h2>Your Property Buying Action Plan</h2>
+
+            <p>Bringing all these elements together, here's a practical action plan for New Zealand property buyers:</p>
+
+            <div class="checklist-box">
+                <h4><i class="fas fa-tasks"></i> Comprehensive Buying Checklist</h4>
+                <ul>
+                    <li><strong>Step 1:</strong> Establish your financial position - obtain mortgage pre-approval and confirm total available budget</li>
+                    <li><strong>Step 2:</strong> Research target locations and property types - understand market dynamics and identify suitable options</li>
+                    <li><strong>Step 3:</strong> Engage professionals early - establish relationships with a lawyer/conveyancer, building inspector, and mortgage broker</li>
+                    <li><strong>Step 4:</strong> When viewing properties, actively look for potential compliance issues - extensions, modifications, condition concerns</li>
+                    <li><strong>Step 5:</strong> Before making an offer, obtain and review the LIM report - understand all consents, hazards, and council information</li>
+                    <li><strong>Step 6:</strong> Make offers subject to conditions - finance, LIM review, building inspection, and lawyer approval at minimum</li>
+                    <li><strong>Step 7:</strong> Commission professional building inspection - attend the inspection if possible to ask questions</li>
+                    <li><strong>Step 8:</strong> Have your lawyer conduct title search and review all documentation - discuss any concerns or unusual aspects</li>
+                    <li><strong>Step 9:</strong> Confirm insurance availability and cost before waiving conditions</li>
+                    <li><strong>Step 10:</strong> Only waive conditions when fully satisfied with all due diligence findings or when specific issues have been addressed to your satisfaction</li>
+                    <li><strong>Step 11:</strong> Conduct final pre-settlement inspection to confirm property condition</li>
+                    <li><strong>Step 12:</strong> Settle and celebrate your purchase - with confidence knowing you've done thorough due diligence</li>
+                </ul>
+            </div>
+
+            <!-- Red Flags -->
+            <h2>Red Flags: Warning Signs to Watch For</h2>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-flag"></i> Serious Warning Signs</h4>
+                <ul>
+                    <li><strong>Vendor Reluctance:</strong> Sellers unwilling to provide LIM reports, building inspections, or documentation should raise immediate concerns</li>
+                    <li><strong>Missing CCCs:</strong> Building consents without corresponding Code Compliance Certificates indicate incomplete or non-compliant work</li>
+                    <li><strong>"As Is Where Is" Sales:</strong> Be extremely cautious of properties sold "as is" - this often indicates known problems</li>
+                    <li><strong>Obvious Unconsented Work:</strong> Extensions, conversions, or modifications that clearly lack proper consents</li>
+                    <li><strong>Moisture or Water Damage:</strong> Staining, mold, musty odors, or obvious dampness indicating water ingress issues</li>
+                    <li><strong>Structural Concerns:</strong> Cracking, sloping floors, misaligned doors/windows suggesting structural movement</li>
+                    <li><strong>Fresh Paint or Cosmetic Covering:</strong> Recently painted areas or cosmetic improvements that may hide underlying problems</li>
+                    <li><strong>Multiple Price Reductions:</strong> While possibly presenting an opportunity, this may also indicate problems other buyers have discovered</li>
+                    <li><strong>Natural Hazard Classifications:</strong> Properties with significant flood, landslip, or erosion risk require careful consideration of future implications</li>
+                    <li><strong>Insurance Difficulties:</strong> If you cannot obtain affordable insurance, walk away - this indicates serious issues</li>
+                </ul>
+            </div>
+
+            <!-- Conclusion -->
+            <h2>Conclusion: Knowledge is Power</h2>
+
+            <p>The New Zealand property market has experienced dramatic changes over the past five years, from pre-COVID stability through unprecedented pandemic-era boom to significant post-boom correction and current stabilization. Auckland's market has been particularly volatile, experiencing both the weakest growth during the boom period and the most substantial correction afterward.</p>
+
+            <p>Looking forward to 2025, most forecasters anticipate modest to moderate growth driven by falling interest rates and improving affordability. However, every property market cycle presents both opportunities and risks.</p>
+
+            <p><strong>The key to successful property purchasing is conducting thorough, professional due diligence.</strong> In New Zealand's complex regulatory environment, with significant risks around compliance, weathertightness, natural hazards, and building quality, cutting corners on due diligence can lead to devastating financial and legal consequences.</p>
+
+            <p>By following the guidance in this article - obtaining comprehensive LIM reports, commissioning professional building inspections, engaging qualified legal professionals, verifying insurance availability, and carefully checking all compliance documentation - you significantly reduce your risk and increase your chances of a successful property purchase that serves your needs both now and in the future.</p>
+
+            <p><strong>Remember:</strong> Every property and every buyer's situation is unique. The information in this article provides a framework and general guidance, but cannot replace the specific, professional advice you need for your particular circumstances and property.</p>
+
+            <p>Make informed decisions, ask difficult questions, don't rush, and ensure any property you purchase is the right one for you - financially sound, legally compliant, structurally sound, and suited to your needs.</p>
+
+            <!-- Data Sources -->
+            <div class="sources-section">
+                <h3><i class="fas fa-database"></i> Data Sources and References</h3>
+                <p>This article is based on publicly available information from reputable sources as of November 2024:</p>
+                <ul>
+                    <li><strong>Real Estate Institute of New Zealand (REINZ)</strong> - Official property transaction data, median prices, and market statistics</li>
+                    <li><strong>Reserve Bank of New Zealand (RBNZ)</strong> - Official Cash Rate data, monetary policy information, and economic indicators</li>
+                    <li><strong>CoreLogic New Zealand</strong> - Property market analysis, price indices, and market forecasts</li>
+                    <li><strong>Major Bank Research</strong> - ANZ, ASB, Westpac, and Kiwibank economic research and property forecasts</li>
+                    <li><strong>Land Information New Zealand (LINZ)</strong> - Title and property ownership information</li>
+                    <li><strong>Settled.govt.nz</strong> - Government guidance on property buying processes</li>
+                    <li><strong>Consumer Protection New Zealand</strong> - Consumer guidance on building inspections and property purchases</li>
+                    <li><strong>New Zealand Legislation</strong> - Building Act 2004, Resource Management Act 1991, and related regulations</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Disclaimer:</strong> While every effort has been made to ensure accuracy, property market data is subject to revision, and different sources may report slightly different figures based on methodology and timing. This article represents information available as of November 2024.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Make Your Next Property Move?</h2>
+        <p>Let's work together to find the perfect property for your needs - with complete confidence in your decision.</p>
+        <a href="index.html#contact" class="btn"><i class="fas fa-phone-alt"></i> Get in Touch Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Garry Singh Real Estate</h3>
+                <p>Your trusted partner in New Zealand real estate. With 2 years of dedicated service and 10+ satisfied clients, I bring fresh energy, modern insights, and unwavering commitment to helping you make informed property decisions.</p>
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">Garry Singh | Licensed Salesperson | Barfoot & Thompson Ltd | Licensed under REAA 2008</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#properties">Properties</a></li>
+                    <li><a href="market-analysis.html">Market Analysis</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="admin.html">Admin Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +64 20 4141 9072</li>
+                    <li><i class="fas fa-envelope"></i> Garry.singh@barfoot.co.nz</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Auckland, New Zealand</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Garry Singh Real Estate | www.garryrealestate.co.nz | All Rights Reserved | <a href="admin.html" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 11px;">Portal</a></p>
+            <p style="margin-top: 10px; font-size: 12px;">Market analysis information is provided for general informational purposes only and does not constitute professional advice. Please seek independent professional guidance for property decisions.</p>
+        </div>
+    </footer>
+</body>
+</html>

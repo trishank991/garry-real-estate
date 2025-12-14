@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Garry Real Estate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Header */
+        .admin-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .admin-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .admin-title h1 {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .admin-title .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-header {
+            background: white;
+            color: var(--primary-color);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Main Container */
+        .admin-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 40px;
+        }
+
+        /* Stats Dashboard */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card.blue .stat-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .stat-card.green .stat-icon {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        .stat-card.orange .stat-icon {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .stat-card.red .stat-icon {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Tabs */
+        .tabs-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .tabs-header {
+            display: flex;
+            border-bottom: 2px solid var(--border);
+            background: var(--bg-light);
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            background: rgba(52, 152, 219, 0.05);
+        }
+
+        .tab-button.active {
+            color: var(--secondary-color);
+            background: white;
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 40px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Form Styles */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* File Upload */
+        .upload-area {
+            border: 3px dashed var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--bg-light);
+        }
+
+        .upload-area:hover {
+            border-color: var(--secondary-color);
+            background: rgba(52, 152, 219, 0.05);
+        }
+
+        .upload-area.dragover {
+            border-color: var(--secondary-color);
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .upload-subtext {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .preview-container {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .preview-container.active {
+            display: block;
+        }
+
+        .preview-image,
+        .preview-video {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .remove-preview {
+            margin-top: 10px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .remove-preview:hover {
+            background: #c0392b;
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-success {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn-danger {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+
+        .btn-small {
+            padding: 8px 18px;
+            font-size: 14px;
+        }
+
+        /* Properties List */
+        .properties-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .property-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 20px;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .property-item:hover {
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+        }
+
+        .property-thumbnail {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: rgba(0,0,0,0.2);
+        }
+
+        .property-details h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .property-details p {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 3px;
+        }
+
+        .property-price {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--secondary-color);
+        }
+
+        .property-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Alert Messages */
+        .alert {
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .alert.active {
+            display: flex;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+
+        .empty-state i {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .empty-state h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .property-item {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-content">
+            <div class="admin-title">
+                <h1><i class="fas fa-cog"></i> Admin Portal</h1>
+                <span class="badge">Garry Real Estate</span>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="btn-header" target="_blank">
+                    <i class="fas fa-eye"></i>
+                    View Website
+                </a>
+                <button onclick="exportData()" class="btn-header">
+                    <i class="fas fa-download"></i>
+                    Export Data
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="admin-container">
+        <!-- Stats Dashboard -->
+        <div class="stats-grid">
+            <div class="stat-card blue">
+                <div class="stat-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="stat-value" id="totalProperties">0</div>
+                <div class="stat-label">Total Properties</div>
+            </div>
+
+            <div class="stat-card green">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-value" id="forSaleProperties">0</div>
+                <div class="stat-label">For Sale</div>
+            </div>
+
+            <div class="stat-card orange">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-value" id="featuredProperties">0</div>
+                <div class="stat-label">Featured</div>
+            </div>
+
+            <div class="stat-card red">
+                <div class="stat-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="stat-value" id="soldProperties">0</div>
+                <div class="stat-label">Sold</div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-button active" onclick="switchTab('add')">
+                    <i class="fas fa-plus-circle"></i> Add New Property
+                </button>
+                <button class="tab-button" onclick="switchTab('manage')">
+                    <i class="fas fa-list"></i> Manage Properties
+                </button>
+            </div>
+
+            <!-- Add Property Tab -->
+            <div class="tab-content active" id="addTab">
+                <div class="alert alert-success" id="successAlert">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="successMessage">Property added successfully!</span>
+                </div>
+
+                <div class="alert alert-error" id="errorAlert">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="errorMessage">Please fill in all required fields.</span>
+                </div>
+
+                <form id="propertyForm" onsubmit="addProperty(event)">
+                    <div class="form-grid">
+                        <div class="form-group form-group-full">
+                            <label>Property Title *</label>
+                            <input type="text" id="title" placeholder="e.g., Modern Family Home in Remuera" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Price (NZD) *</label>
+                            <input type="number" id="price" placeholder="e.g., 1250000" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location *</label>
+                            <input type="text" id="location" placeholder="e.g., Remuera, Auckland" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Property Type *</label>
+                            <select id="type" required>
+                                <option value="">Select Type</option>
+                                <option>House</option>
+                                <option>Apartment</option>
+                                <option>Townhouse</option>
+                                <option>Land</option>
+                                <option>Commercial</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Status *</label>
+                            <select id="status" required>
+                                <option>For Sale</option>
+                                <option>New Listing</option>
+                                <option>Sold</option>
+                                <option>Under Contract</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bedrooms *</label>
+                            <input type="number" id="beds" placeholder="e.g., 4" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bathrooms *</label>
+                            <input type="number" id="baths" placeholder="e.g., 2" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Garage Spaces *</label>
+                            <input type="number" id="garage" placeholder="e.g., 2" required>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label>Description</label>
+                            <textarea id="description" placeholder="Add property description, features, and highlights..."></textarea>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label>Upload Image or Video</label>
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="upload-text">Click to upload or drag and drop</div>
+                                <div class="upload-subtext">Image or Video (Max 50MB)</div>
+                            </div>
+                            <input type="file" id="fileInput" accept="image/*,video/*">
+
+                            <div class="preview-container" id="previewContainer">
+                                <img id="previewImage" class="preview-image" style="display:none;">
+                                <video id="previewVideo" class="preview-video" controls style="display:none;"></video>
+                                <button type="button" class="remove-preview" onclick="removePreview()">
+                                    <i class="fas fa-times"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="featured">
+                                <label for="featured">
+                                    <i class="fas fa-star" style="color: #f39c12;"></i>
+                                    Mark as Featured Property
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-plus"></i>
+                        <span id="submitButtonText">Add Property</span>
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="resetForm()" style="margin-left: 10px;">
+                        <i class="fas fa-undo"></i>
+                        Reset Form
+                    </button>
+                </form>
+            </div>
+
+            <!-- Manage Properties Tab -->
+            <div class="tab-content" id="manageTab">
+                <div class="properties-list" id="propertiesList">
+                    <!-- Properties will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let properties = JSON.parse(localStorage.getItem('garryProperties') || '[]');
+        let currentMediaUrl = null;
+        let currentMediaType = null;
+        let editingIndex = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStats();
+            loadPropertiesList();
+            setupFileUpload();
+        });
+
+        // Setup file upload
+        function setupFileUpload() {
+            const uploadArea = document.getElementById('uploadArea');
+            const fileInput = document.getElementById('fileInput');
+
+            uploadArea.addEventListener('click', () => fileInput.click());
+
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                const file = e.dataTransfer.files[0];
+                if (file) handleFile(file);
+            });
+
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) handleFile(file);
+            });
+        }
+
+        // Handle file upload
+        function handleFile(file) {
+            const maxSize = 50 * 1024 * 1024; // 50MB
+
+            if (file.size > maxSize) {
+                showError('File size exceeds 50MB limit');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                currentMediaUrl = e.target.result;
+
+                if (file.type.startsWith('image/')) {
+                    currentMediaType = 'image';
+                    document.getElementById('previewImage').src = currentMediaUrl;
+                    document.getElementById('previewImage').style.display = 'block';
+                    document.getElementById('previewVideo').style.display = 'none';
+                } else if (file.type.startsWith('video/')) {
+                    currentMediaType = 'video';
+                    document.getElementById('previewVideo').src = currentMediaUrl;
+                    document.getElementById('previewVideo').style.display = 'block';
+                    document.getElementById('previewImage').style.display = 'none';
+                }
+
+                document.getElementById('previewContainer').classList.add('active');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Remove preview
+        function removePreview() {
+            currentMediaUrl = null;
+            currentMediaType = null;
+            document.getElementById('previewContainer').classList.remove('active');
+            document.getElementById('previewImage').src = '';
+            document.getElementById('previewVideo').src = '';
+            document.getElementById('fileInput').value = '';
+        }
+
+        // Add/Update Property
+        function addProperty(event) {
+            event.preventDefault();
+
+            const property = {
+                id: editingIndex !== null ? properties[editingIndex].id : Date.now(),
+                title: document.getElementById('title').value,
+                price: document.getElementById('price').value,
+                location: document.getElementById('location').value,
+                type: document.getElementById('type').value,
+                status: document.getElementById('status').value,
+                beds: document.getElementById('beds').value,
+                baths: document.getElementById('baths').value,
+                garage: document.getElementById('garage').value,
+                description: document.getElementById('description').value,
+                featured: document.getElementById('featured').checked,
+                imageUrl: currentMediaType === 'image' ? currentMediaUrl : (editingIndex !== null ? properties[editingIndex].imageUrl : null),
+                videoUrl: currentMediaType === 'video' ? currentMediaUrl : (editingIndex !== null ? properties[editingIndex].videoUrl : null),
+                createdAt: editingIndex !== null ? properties[editingIndex].createdAt : new Date().toISOString()
+            };
+
+            if (editingIndex !== null) {
+                properties[editingIndex] = property;
+                showSuccess('Property updated successfully!');
+                editingIndex = null;
+                document.getElementById('submitButtonText').textContent = 'Add Property';
+            } else {
+                properties.push(property);
+                showSuccess('Property added successfully!');
+            }
+
+            localStorage.setItem('garryProperties', JSON.stringify(properties));
+
+            resetForm();
+            updateStats();
+            loadPropertiesList();
+        }
+
+        // Edit Property
+        function editProperty(index) {
+            editingIndex = index;
+            const property = properties[index];
+
+            document.getElementById('title').value = property.title;
+            document.getElementById('price').value = property.price;
+            document.getElementById('location').value = property.location;
+            document.getElementById('type').value = property.type;
+            document.getElementById('status').value = property.status;
+            document.getElementById('beds').value = property.beds;
+            document.getElementById('baths').value = property.baths;
+            document.getElementById('garage').value = property.garage;
+            document.getElementById('description').value = property.description || '';
+            document.getElementById('featured').checked = property.featured;
+
+            if (property.imageUrl) {
+                currentMediaUrl = property.imageUrl;
+                currentMediaType = 'image';
+                document.getElementById('previewImage').src = property.imageUrl;
+                document.getElementById('previewImage').style.display = 'block';
+                document.getElementById('previewVideo').style.display = 'none';
+                document.getElementById('previewContainer').classList.add('active');
+            } else if (property.videoUrl) {
+                currentMediaUrl = property.videoUrl;
+                currentMediaType = 'video';
+                document.getElementById('previewVideo').src = property.videoUrl;
+                document.getElementById('previewVideo').style.display = 'block';
+                document.getElementById('previewImage').style.display = 'none';
+                document.getElementById('previewContainer').classList.add('active');
+            }
+
+            document.getElementById('submitButtonText').textContent = 'Update Property';
+            switchTab('add');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Delete Property
+        function deleteProperty(index) {
+            if (confirm('Are you sure you want to delete this property?')) {
+                properties.splice(index, 1);
+                localStorage.setItem('garryProperties', JSON.stringify(properties));
+                showSuccess('Property deleted successfully!');
+                updateStats();
+                loadPropertiesList();
+            }
+        }
+
+        // Reset Form
+        function resetForm() {
+            document.getElementById('propertyForm').reset();
+            removePreview();
+            editingIndex = null;
+            document.getElementById('submitButtonText').textContent = 'Add Property';
+        }
+
+        // Load Properties List
+        function loadPropertiesList() {
+            const list = document.getElementById('propertiesList');
+
+            if (properties.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-home"></i>
+                        <h3>No properties yet</h3>
+                        <p>Start by adding your first property!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = '';
+
+            properties.forEach((property, index) => {
+                const item = document.createElement('div');
+                item.className = 'property-item';
+
+                let thumbnailStyle = '';
+                let thumbnailContent = '🏠';
+
+                if (property.imageUrl) {
+                    thumbnailStyle = `background-image: url('${property.imageUrl}');`;
+                    thumbnailContent = '';
+                } else if (property.videoUrl) {
+                    thumbnailContent = '🎥';
+                }
+
+                item.innerHTML = `
+                    <div class="property-thumbnail" style="${thumbnailStyle}">${thumbnailContent}</div>
+                    <div class="property-details">
+                        <h3>${property.title}</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> ${property.location}</p>
+                        <p><i class="fas fa-home"></i> ${property.type} | <i class="fas fa-bed"></i> ${property.beds} Beds | <i class="fas fa-bath"></i> ${property.baths} Baths</p>
+                        <div class="property-price">$${parseInt(property.price).toLocaleString()}</div>
+                        <p style="margin-top: 5px;">
+                            <span style="background: ${property.status === 'Sold' ? '#27ae60' : '#3498db'}; color: white; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;">
+                                ${property.status}
+                            </span>
+                            ${property.featured ? '<span style="background: #f39c12; color: white; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 5px;"><i class="fas fa-star"></i> Featured</span>' : ''}
+                        </p>
+                    </div>
+                    <div class="property-actions">
+                        <button class="btn btn-primary btn-small" onclick="editProperty(${index})">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-small" onclick="deleteProperty(${index})">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                `;
+
+                list.appendChild(item);
+            });
+        }
+
+        // Update Stats
+        function updateStats() {
+            document.getElementById('totalProperties').textContent = properties.length;
+            document.getElementById('forSaleProperties').textContent = properties.filter(p => p.status === 'For Sale' || p.status === 'New Listing').length;
+            document.getElementById('featuredProperties').textContent = properties.filter(p => p.featured).length;
+            document.getElementById('soldProperties').textContent = properties.filter(p => p.status === 'Sold').length;
+        }
+
+        // Switch Tabs
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            if (tab === 'add') {
+                document.querySelector('.tab-button:nth-child(1)').classList.add('active');
+                document.getElementById('addTab').classList.add('active');
+            } else {
+                document.querySelector('.tab-button:nth-child(2)').classList.add('active');
+                document.getElementById('manageTab').classList.add('active');
+            }
+        }
+
+        // Export Data
+        function exportData() {
+            const dataStr = JSON.stringify(properties, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'garry-real-estate-data.json';
+            link.click();
+            showSuccess('Data exported successfully!');
+        }
+
+        // Show Success Message
+        function showSuccess(message) {
+            document.getElementById('successMessage').textContent = message;
+            document.getElementById('successAlert').classList.add('active');
+            document.getElementById('errorAlert').classList.remove('active');
+
+            setTimeout(() => {
+                document.getElementById('successAlert').classList.remove('active');
+            }, 5000);
+        }
+
+        // Show Error Message
+        function showError(message) {
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('errorAlert').classList.add('active');
+            document.getElementById('successAlert').classList.remove('active');
+
+            setTimeout(() => {
+                document.getElementById('errorAlert').classList.remove('active');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

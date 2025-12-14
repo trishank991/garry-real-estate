@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garry Singh - Premier Real Estate Agent in New Zealand | www.garryrealestate.co.nz</title>
+    <meta name="description" content="Garry Singh - Dedicated Real Estate Agent in New Zealand. 2 years of passionate service with 10+ satisfied clients. Buy, sell, or invest with confidence. Visit www.garryrealestate.co.nz">
+    <meta name="author" content="Garry Real Estate">
+    <link rel="canonical" href="https://www.garryrealestate.co.nz/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            position: relative;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover .logo-icon {
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Modern G monogram */
+        .logo-icon::before {
+            content: 'G';
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -2px;
+        }
+
+        /* Key symbol - represents trust and access */
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ffd700;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo-name {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.8px;
+            line-height: 1;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .logo-tagline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 2px;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        .cta-button {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: white;
+            padding: 100px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content .highlight {
+            color: #ffd700;
+            text-decoration: underline;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 8px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            display: block;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .garry-photo {
+            width: 100%;
+            max-width: 450px;
+            height: 550px;
+            background: url('garry-singh.jpg') center center / cover no-repeat;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-badge {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .photo-badge strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .photo-badge span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Property Search Section */
+        .search-section {
+            background: white;
+            padding: 40px;
+            margin: -60px auto 0;
+            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 10px 60px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 100;
+        }
+
+        .search-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .search-tab {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .search-tab.active {
+            color: var(--secondary-color);
+        }
+
+        .search-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1fr 1fr auto;
+            gap: 15px;
+            align-items: end;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 14px 18px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .search-btn {
+            padding: 14px 35px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Featured Properties */
+        .properties-section {
+            padding: 120px 40px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+
+        .properties-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+        }
+
+        .property-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .property-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .property-image {
+            height: 280px;
+            background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .property-image.no-image::before {
+            content: '🏠';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            opacity: 0.3;
+        }
+
+        .property-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .property-badge.sold {
+            background: #27ae60;
+        }
+
+        .property-badge.featured {
+            background: #f39c12;
+        }
+
+        .property-info {
+            padding: 25px;
+        }
+
+        .property-price {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .property-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .property-location {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .property-features {
+            display: flex;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .feature i {
+            color: var(--secondary-color);
+        }
+
+        .no-properties {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+
+        .no-properties i {
+            font-size: 80px;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .no-properties h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-info p {
+            font-size: 17px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .contact-item-text strong {
+            display: block;
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-item-text a {
+            font-size: 18px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item-text a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-size: 14px;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        /* Tablet Styles */
+        @media (max-width: 1024px) {
+            .hero-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+                display: flex;
+                justify-content: center;
+            }
+
+            .garry-photo {
+                max-width: 350px;
+                height: 400px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .search-btn {
+                grid-column: 1 / -1;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            .nav-menu {
+                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                margin: 0;
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-menu a {
+                font-size: 18px;
+                display: block;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                cursor: pointer;
+            }
+
+            .cta-button {
+                display: none;
+            }
+
+            /* Header */
+            .header {
+                padding: 10px 15px;
+            }
+
+            .logo-name {
+                font-size: 20px;
+            }
+
+            .logo-tagline {
+                font-size: 10px;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            /* Hero Section */
+            .hero {
+                margin-top: 70px;
+                padding: 40px 20px;
+            }
+
+            .hero-container {
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .garry-photo {
+                max-width: 280px;
+                height: 350px;
+                border-radius: 20px;
+            }
+
+            .photo-badge {
+                bottom: 15px;
+                left: 15px;
+                padding: 10px 15px;
+                border-radius: 10px;
+            }
+
+            .photo-badge strong {
+                font-size: 14px;
+            }
+
+            .photo-badge span {
+                font-size: 10px;
+            }
+
+            /* Hero Stats */
+            .hero-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .stat-item {
+                flex: 1;
+                min-width: 80px;
+            }
+
+            .stat-number {
+                font-size: 28px;
+            }
+
+            .stat-label {
+                font-size: 10px;
+            }
+
+            /* Hero Buttons */
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 14px 30px;
+                font-size: 14px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Search Section */
+            .search-section {
+                padding: 30px 15px;
+            }
+
+            .search-tabs {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .search-tab {
+                flex: 1;
+                min-width: 80px;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .form-group label {
+                font-size: 12px;
+            }
+
+            .form-group input, .form-group select {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .search-btn {
+                padding: 14px;
+                font-size: 16px;
+            }
+
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .section-header p {
+                font-size: 14px;
+            }
+
+            /* Properties Grid */
+            .properties-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+
+            .property-card {
+                border-radius: 15px;
+            }
+
+            .property-image {
+                height: 200px;
+            }
+
+            .property-details {
+                padding: 20px;
+            }
+
+            .property-price {
+                font-size: 22px;
+            }
+
+            .property-title {
+                font-size: 16px;
+            }
+
+            /* Contact Section */
+            .contact-section {
+                padding: 40px 15px;
+            }
+
+            .contact-info h3 {
+                font-size: 24px;
+            }
+
+            .contact-item {
+                padding: 15px;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .social-link {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 40px 15px 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-section h4 {
+                font-size: 16px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        /* Small Mobile Styles */
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 24px;
+            }
+
+            .garry-photo {
+                max-width: 240px;
+                height: 300px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .hero-stats {
+                gap: 10px;
+            }
+
+            .search-section {
+                padding: 20px 10px;
+            }
+
+            .property-features {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-name">Garry Singh</div>
+                    <div class="logo-tagline">Your Key to Home</div>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Properties</a></li>
+                <li><a href="market-analysis.html">Market Analysis</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Find Your Dream Home with <span class="highlight">Garry Singh</span></h1>
+                <p>Your trusted real estate expert in New Zealand. I don't just sell properties—I help you find your perfect home and make your real estate dreams a reality.</p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Properties Sold</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" style="font-size: 28px;">Dedicated</span>
+                        <span class="stat-label">Service</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#properties" class="btn-primary">
+                        <i class="fas fa-search"></i>
+                        Browse Properties
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-phone"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="garry-photo">
+                    <div class="photo-badge">
+                        <strong>Garry Singh</strong>
+                        <span>Licensed Real Estate Agent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Search Section -->
+    <section class="search-section">
+        <div class="search-tabs">
+            <button class="search-tab active">Buy</button>
+            <button class="search-tab">Rent</button>
+            <button class="search-tab">Sell</button>
+        </div>
+
+        <form class="search-form" onsubmit="searchProperties(event)">
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" id="searchLocation" placeholder="Enter suburb, city or region">
+            </div>
+            <div class="form-group">
+                <label>Property Type</label>
+                <select id="searchType">
+                    <option value="">All Types</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Townhouse</option>
+                    <option>Land</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Min Price</label>
+                <input type="number" id="searchMinPrice" placeholder="Any">
+            </div>
+            <div class="form-group">
+                <label>Max Price</label>
+                <input type="number" id="searchMaxPrice" placeholder="Any">
+            </div>
+            <button type="submit" class="search-btn">
+                <i class="fas fa-search"></i>
+                Search
+            </button>
+        </form>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="properties-section" id="properties">
+        <div class="section-header">
+            <h2>Featured Properties</h2>
+            <p>Handpicked properties that offer exceptional value and lifestyle. Let me help you find your perfect match.</p>
+        </div>
+
+        <div class="properties-grid" id="propertiesGrid">
+            <!-- Properties will be loaded dynamically from admin panel -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Let's Connect</h2>
+                <p>Have questions about buying, selling, or investing in property? I'm here to help. Reach out today and let's start your real estate journey together.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <strong>Phone</strong>
+                            <a href="tel:+64204141072">+64 20 4141 9072</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <strong>Email</strong>
+                            <a href="mailto:Garry.singh@barfoot.co.nz">Garry.singh@barfoot.co.nz</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <strong>Office</strong>
+                            <a href="#">Auckland, New Zealand</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Garry Singh Real Estate</h3>
+                <p>Your trusted partner in New Zealand real estate. With 2 years of dedicated service and 10+ satisfied clients, I bring fresh energy, modern insights, and unwavering commitment to helping you find your perfect home and achieve your property goals.</p>
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">Garry Singh | Licensed Salesperson | Barfoot & Thompson Ltd | Licensed under REAA 2008</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="market-analysis.html">Market Analysis</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Property Buying</a></li>
+                    <li><a href="#">Property Selling</a></li>
+                    <li><a href="#">Investment Advice</a></li>
+                    <li><a href="#">Market Analysis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Market Reports</a></li>
+                    <li><a href="#">Buying Guide</a></li>
+                    <li><a href="#">Selling Guide</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Garry Real Estate. All rights reserved. | <a href="admin.html" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 11px;">Portal</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    // Toggle icon between bars and X
+                    const icon = mobileMenuToggle.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close menu when clicking on a link
+                navMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+
+        // Load properties from localStorage when page loads
+        function loadProperties() {
+            const properties = JSON.parse(localStorage.getItem('garryProperties') || '[]');
+            displayProperties(properties);
+        }
+
+        // Display properties on the page
+        function displayProperties(properties) {
+            const grid = document.getElementById('propertiesGrid');
+
+            if (properties.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-properties">
+                        <i class="fas fa-home"></i>
+                        <h3>No properties available</h3>
+                        <p>Check back soon for new listings!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = '';
+
+            properties.forEach(property => {
+                const badgeClass = property.status === 'Sold' ? 'sold' :
+                                  property.featured ? 'featured' : '';
+
+                let mediaHtml = '';
+                if (property.videoUrl) {
+                    mediaHtml = `<video class="property-video" controls><source src="${property.videoUrl}" type="video/mp4">Your browser does not support video.</video>`;
+                } else if (property.imageUrl) {
+                    mediaHtml = `<div class="property-image" style="background-image: url('${property.imageUrl}')"></div>`;
+                } else {
+                    mediaHtml = `<div class="property-image no-image"></div>`;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'property-card';
+                card.innerHTML = `
+                    ${mediaHtml}
+                    <span class="property-badge ${badgeClass}">${property.status || 'For Sale'}</span>
+                    <div class="property-info">
+                        <div class="property-price">$${parseInt(property.price).toLocaleString()}</div>
+                        <div class="property-title">${property.title}</div>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ${property.location}
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>${property.beds} Beds</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>${property.baths} Baths</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>${property.garage} Garage</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // Search properties
+        function searchProperties(event) {
+            event.preventDefault();
+
+            const location = document.getElementById('searchLocation').value.toLowerCase();
+            const type = document.getElementById('searchType').value.toLowerCase();
+            const minPrice = parseFloat(document.getElementById('searchMinPrice').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('searchMaxPrice').value) || Infinity;
+
+            const allProperties = JSON.parse(localStorage.getItem('garryProperties') || '[]');
+
+            const filtered = allProperties.filter(property => {
+                const matchesLocation = !location || property.location.toLowerCase().includes(location);
+                const matchesType = !type || property.type.toLowerCase() === type;
+                const matchesPrice = parseFloat(property.price) >= minPrice && parseFloat(property.price) <= maxPrice;
+
+                return matchesLocation && matchesType && matchesPrice;
+            });
+
+            displayProperties(filtered);
+
+            // Scroll to properties section
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Search tabs functionality
+        document.querySelectorAll('.search-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Load properties when page loads
+        document.addEventListener('DOMContentLoaded', loadProperties);
+    </script>
+</body>
+</html>

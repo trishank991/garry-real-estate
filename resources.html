@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Resources & Guides | Garry Singh Real Estate | New Zealand</title>
+    <meta name="description" content="Free property resources, buying guides, selling guides, and market reports for New Zealand real estate. Expert guidance from Garry Singh Real Estate.">
+    <meta name="author" content="Garry Singh Real Estate">
+    <link rel="canonical" href="https://www.garryrealestate.co.nz/resources.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --navy-deep: #1e3c72;
+            --royal-blue: #2a5298;
+            --steel-blue: #7e8ba3;
+            --gold-accent: #ffd700;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logo-container:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo-icon {
+            width: 65px;
+            height: 65px;
+            position: relative;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-container:hover .logo-icon {
+            box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+            transform: scale(1.05);
+        }
+
+        .logo-icon::before {
+            content: 'G';
+            font-size: 36px;
+            font-weight: 900;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -2px;
+        }
+
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ffd700;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo-name {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.8px;
+            line-height: 1;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-tagline {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            position: relative;
+            padding-left: 12px;
+        }
+
+        .logo-tagline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 2px;
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L50 50L0 100L50 100L100 50L50 0Z" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        /* Disclaimer */
+        .disclaimer-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ffd700;
+            padding: 25px;
+            margin-bottom: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .disclaimer-box h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .disclaimer-box p {
+            color: #856404;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        /* Resource Tiles Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .resource-tile {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .resource-tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .tile-header {
+            padding: 30px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .tile-header.orange {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .tile-header.green {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .tile-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .tile-header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tile-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .tile-content {
+            padding: 30px;
+        }
+
+        .tile-content h3 {
+            font-size: 18px;
+            color: var(--navy-deep);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .tile-content ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tile-content li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .tile-content li:last-child {
+            border-bottom: none;
+        }
+
+        .tile-content li::before {
+            content: '✓';
+            color: #28a745;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .tile-footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .tile-footer a {
+            color: var(--royal-blue);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .tile-footer a:hover {
+            color: var(--navy-deep);
+            gap: 12px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 15px;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-section .btn {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .cta-section .btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer h3, .footer h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <div class="logo-name">Garry Singh</div>
+                    <div class="logo-tagline">Your Key to Home</div>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#properties">Properties</a></li>
+                <li><a href="market-analysis.html">Market Analysis</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-book-open"></i> Property Resources & Guides</h1>
+            <p>Expert insights, practical guides, and market intelligence for New Zealand property buyers and sellers</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Disclaimer -->
+        <div class="disclaimer-box">
+            <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+            <p><strong>These resources are provided for general informational and educational purposes only.</strong> They do not constitute legal, financial, tax, or professional advice specific to your circumstances. Property transactions are complex and highly regulated in New Zealand. Before making any property decisions, you must seek independent advice from qualified professionals including licensed real estate agents, solicitors, mortgage brokers, accountants, and building inspectors who can assess your specific situation. Neither Garry Singh Real Estate nor the author accepts liability for decisions made based on this information.</p>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resources-grid">
+            <!-- Market Reports -->
+            <div class="resource-tile">
+                <div class="tile-header">
+                    <div class="tile-icon"><i class="fas fa-chart-line"></i></div>
+                    <h2>Market Reports</h2>
+                    <p>Latest market insights & trends</p>
+                </div>
+                <div class="tile-content">
+                    <h3>What You'll Learn:</h3>
+                    <ul>
+                        <li>Current median house prices by region</li>
+                        <li>Market trend analysis and forecasts</li>
+                        <li>Interest rate impacts on affordability</li>
+                        <li>Supply and demand dynamics</li>
+                        <li>Regional performance comparisons</li>
+                        <li>Best times to buy or sell</li>
+                        <li>Investment opportunity indicators</li>
+                    </ul>
+                </div>
+                <div class="tile-footer">
+                    <a href="market-analysis.html">Read Full Market Analysis <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Buying Guide -->
+            <div class="resource-tile">
+                <div class="tile-header green">
+                    <div class="tile-icon"><i class="fas fa-home"></i></div>
+                    <h2>Buying Guide</h2>
+                    <p>Your roadmap to property ownership</p>
+                </div>
+                <div class="tile-content">
+                    <h3>Essential Topics Covered:</h3>
+                    <ul>
+                        <li>Deposit requirements (5-20% based on circumstances)</li>
+                        <li>LVR restrictions and DTI ratios explained</li>
+                        <li>Mortgage pre-approval process</li>
+                        <li>First Home Loan eligibility (5% deposit option)</li>
+                        <li>KiwiSaver withdrawal for first home</li>
+                        <li>Due diligence: LIM reports, building inspections</li>
+                        <li>Understanding title types and legal process</li>
+                        <li>Additional costs: legal fees, insurance, rates</li>
+                        <li>Making offers and negotiation strategies</li>
+                        <li>Settlement day preparation</li>
+                    </ul>
+                </div>
+                <div class="tile-footer">
+                    <a href="#buying-guide">View Complete Buying Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Selling Guide -->
+            <div class="resource-tile">
+                <div class="tile-header orange">
+                    <div class="tile-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h2>Selling Guide</h2>
+                    <p>Maximize your property sale success</p>
+                </div>
+                <div class="tile-content">
+                    <h3>Key Steps Explained:</h3>
+                    <ul>
+                        <li>Preparing your property for sale</li>
+                        <li>Property presentation and staging tips</li>
+                        <li>Vendor due diligence requirements</li>
+                        <li>Title verification and compliance checks</li>
+                        <li>Building consent and CCC requirements</li>
+                        <li>Pricing strategy and market appraisal</li>
+                        <li>Marketing methods: auction vs fixed price</li>
+                        <li>Managing viewings and open homes</li>
+                        <li>Evaluating offers and negotiation</li>
+                        <li>Legal obligations and disclosure requirements</li>
+                        <li>Settlement process and timing</li>
+                    </ul>
+                </div>
+                <div class="tile-footer">
+                    <a href="#selling-guide">View Complete Selling Guide <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Buying Guide Section -->
+        <div id="buying-guide" style="scroll-margin-top: 120px; background: white; padding: 60px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 40px;">
+            <h2 style="font-size: 36px; color: var(--navy-deep); margin-bottom: 30px; text-align: center;"><i class="fas fa-home"></i> Complete Property Buying Guide for New Zealand</h2>
+
+            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 25px; border-radius: 10px; border-left: 5px solid #28a745; margin-bottom: 30px;">
+                <p style="color: #155724; line-height: 1.8; margin: 0;"><strong>Updated November 2024:</strong> This guide reflects current New Zealand property regulations including the July 2024 LVR changes and DTI (Debt-to-Income) ratio restrictions. Always verify current requirements with your mortgage broker or bank as regulations may change.</p>
+            </div>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 1: Assess Your Financial Position</h3>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Understanding Deposit Requirements (2024)</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Standard Requirements:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Owner-Occupiers:</strong> Generally require a 20% deposit to avoid mortgage insurance and secure better interest rates</li>
+                <li><strong>First Home Buyers (Standard):</strong> Can sometimes access mortgages with 10% deposit, though this typically requires mortgage insurance</li>
+                <li><strong>First Home Loan Programme:</strong> Eligible buyers can purchase with just 5% deposit, with Kāinga Ora underwriting the loan</li>
+                <li><strong>Investment Properties:</strong> Typically require 35-40% deposit under current LVR restrictions</li>
+            </ul>
+
+            <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Important Context:</strong> As of July 2024, LVR restrictions have been eased to help first home buyers enter the market. Banks are now allowed to allocate 20% of their lending to 'high LVR owner occupiers' who don't meet the standard 20% deposit requirement.</p>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Debt-to-Income (DTI) Ratios</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Introduced in July 2024, DTI restrictions cap total debt at six times annual gross income. For example:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Annual income: $100,000 → Maximum borrowing: $600,000</li>
+                <li>Annual income: $150,000 → Maximum borrowing: $900,000</li>
+            </ul>
+            <p style="margin-bottom: 20px; line-height: 1.8;"><strong>Note:</strong> This includes all debt (existing mortgages, personal loans, credit cards), not just your new home loan.</p>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">KiwiSaver for First Home Buyers</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">First-home buyers may be able to withdraw most of their KiwiSaver funds for a deposit:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Eligibility:</strong> Minimum 3 years membership in KiwiSaver</li>
+                <li><strong>Withdrawal Amount:</strong> Can withdraw savings except the initial $1,000 government kickstart</li>
+                <li><strong>Process:</strong> Apply through your KiwiSaver provider with signed Sale & Purchase Agreement</li>
+            </ul>
+
+            <p style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 20px; color: #856404;"><strong>Note:</strong> The First Home Grant ended in May 2024 and is no longer available. However, the KiwiSaver withdrawal option and First Home Loan programme continue to operate.</p>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 2: Get Mortgage Pre-Approval</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Before house hunting, obtain mortgage pre-approval from a bank or through a mortgage broker:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Benefits:</strong> Know your borrowing limit, strengthen your negotiating position, speed up the purchasing process</li>
+                <li><strong>Required Documents:</strong> Proof of income (payslips, tax returns), proof of deposit, identification, bank statements, details of debts and expenses</li>
+                <li><strong>Timeline:</strong> Can typically be obtained within 1-3 business days</li>
+                <li><strong>Validity:</strong> Usually valid for 90 days, subject to no material change in circumstances</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 3: Budget for Additional Costs</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Beyond the purchase price and deposit, budget for:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Legal Fees:</strong> $1,500 - $3,000+ for conveyancing services</li>
+                <li><strong>LIM Report:</strong> $200 - $400 from local council</li>
+                <li><strong>Building Inspection:</strong> $500 - $1,500+ depending on property size and complexity</li>
+                <li><strong>Valuation:</strong> $500 - $1,000+ if required by lender</li>
+                <li><strong>Insurance:</strong> Home and contents insurance (required before settlement)</li>
+                <li><strong>Moving Costs:</strong> Removalists, truck rental, storage if needed</li>
+                <li><strong>Council Rates:</strong> Pro-rated from settlement date</li>
+                <li><strong>Chattels:</strong> Appliances, window treatments, garden equipment if not included</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 4: Understand Due Diligence Requirements</h3>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">LIM Report (Land Information Memorandum)</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">The LIM report is essential and contains:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Building consents and Code Compliance Certificates (CCCs)</li>
+                <li>Zoning information and permitted land uses</li>
+                <li>Natural hazard classifications (flooding, landslip, earthquake risk)</li>
+                <li>Services: water, wastewater, stormwater connections</li>
+                <li>Outstanding rates or charges</li>
+                <li>Council notices or requisitions</li>
+            </ul>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Building Inspection</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Always commission a professional pre-purchase building inspection (NZS 4306:2005 standard):</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Structural integrity and foundation condition</li>
+                <li>Weathertightness and moisture levels</li>
+                <li>Roof condition and expected life remaining</li>
+                <li>Plumbing and electrical systems</li>
+                <li>Drainage and ventilation</li>
+                <li>Evidence of pests (borer, rot)</li>
+                <li>Compliance observations</li>
+            </ul>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Title Search</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Your lawyer will conduct a title search through LINZ (Land Information New Zealand) revealing:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Legal ownership confirmation</li>
+                <li>Title type (freehold, leasehold, cross-lease, unit title)</li>
+                <li>Easements, covenants, and encumbrances</li>
+                <li>Boundary information</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 5: Making an Offer</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Always include conditions in your offer:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Finance Condition:</strong> Subject to obtaining satisfactory mortgage approval</li>
+                <li><strong>LIM Condition:</strong> Subject to review of LIM report</li>
+                <li><strong>Building Inspection:</strong> Subject to satisfactory building report</li>
+                <li><strong>Lawyer Approval:</strong> Subject to lawyer review of Sale & Purchase Agreement</li>
+                <li><strong>Typical Timeframe:</strong> 10-15 working days for conditions to be satisfied or waived</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 6: Settlement</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;">The final stage where ownership transfers:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Typical settlement period: 4-6 weeks from unconditional agreement</li>
+                <li>Final pre-settlement inspection (verify property condition)</li>
+                <li>Insurance must be in place before settlement</li>
+                <li>Funds transferred, title registered, keys collected</li>
+            </ul>
+
+            <div style="background: #f8d7da; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545; margin-top: 30px; color: #721c24;">
+                <p style="margin: 0; line-height: 1.8;"><strong>Critical Warning:</strong> Never waive conditions without fully understanding the implications. If you discover problems after going unconditional, you typically cannot withdraw without significant financial penalties. When in doubt, extend condition dates rather than waiving them prematurely.</p>
+            </div>
+        </div>
+
+        <!-- Detailed Selling Guide Section -->
+        <div id="selling-guide" style="scroll-margin-top: 120px; background: white; padding: 60px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 40px;">
+            <h2 style="font-size: 36px; color: var(--navy-deep); margin-bottom: 30px; text-align: center;"><i class="fas fa-hand-holding-usd"></i> Complete Property Selling Guide for New Zealand</h2>
+
+            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 25px; border-radius: 10px; border-left: 5px solid #28a745; margin-bottom: 30px;">
+                <p style="color: #155724; line-height: 1.8; margin: 0;"><strong>Updated November 2024:</strong> This guide reflects current New Zealand property law and vendor obligations under the Real Estate Agents Act 2008, Sale and Purchase of Land Act 2017, and related regulations.</p>
+            </div>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 1: Prepare Your Property</h3>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Property Presentation</h4>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Declutter and Clean:</strong> Remove personal items, deep clean all areas, create neutral appeal</li>
+                <li><strong>Minor Repairs:</strong> Fix leaky taps, squeaky doors, damaged fixtures, cracked tiles</li>
+                <li><strong>Paint and Polish:</strong> Fresh paint in neutral colors significantly improves presentation</li>
+                <li><strong>Gardens and Exterior:</strong> First impressions matter - mow lawns, trim hedges, clean paths and driveways</li>
+                <li><strong>Professional Photography:</strong> Quality photos are essential for online listings</li>
+                <li><strong>Consider Staging:</strong> Professional staging can increase perceived value and sale price</li>
+            </ul>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Vendor Due Diligence</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Discuss with your property lawyer whether to conduct vendor due diligence to identify any issues requiring disclosure:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Building Consents:</strong> Verify all building work has proper consents</li>
+                <li><strong>Code Compliance Certificates:</strong> Ensure all consented work has CCCs</li>
+                <li><strong>Title Verification:</strong> Confirm title details are correct and up-to-date</li>
+                <li><strong>Council Records:</strong> Check for notices, requisitions, or outstanding issues</li>
+                <li><strong>Chattels List:</strong> Decide which items stay with the property</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 2: Understand Your Legal Obligations</h3>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Disclosure Requirements</h4>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Vendors have legal obligations to disclose certain information:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Building Consent Issues:</strong> Must disclose unconsented work or missing CCCs</li>
+                <li><strong>Known Defects:</strong> Any significant defects you're aware of (structural, weathertightness, etc.)</li>
+                <li><strong>Natural Hazards:</strong> If you have knowledge of flooding, landslip, or earthquake damage</li>
+                <li><strong>Legal Issues:</strong> Disputes, easements, encroachments affecting the property</li>
+                <li><strong>Unit Title Properties:</strong> Body corporate records, levies, planned maintenance must be disclosed pre-contract</li>
+            </ul>
+
+            <div style="background: #f8d7da; padding: 20px; border-radius: 8px; border-left: 4px solid #dc3545; margin-bottom: 20px; color: #721c24;">
+                <p style="margin: 0; line-height: 1.8;"><strong>Legal Warning:</strong> Failing to disclose known issues can result in legal action, financial liability, or cancellation of the sale even after settlement. When in doubt, disclose. Consult your lawyer about disclosure obligations specific to your property.</p>
+            </div>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Compliance Checks</h4>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Building Consents:</strong> Gather all building consent documentation</li>
+                <li><strong>CCCs:</strong> Obtain certificates for all completed work</li>
+                <li><strong>RMA Requirements:</strong> Section 225 Resource Management Act requirements for early deposit release</li>
+                <li><strong>Certificates of Acceptance:</strong> If CCCs unavailable, may need retrospective COA from council</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 3: Choose Your Selling Method</h3>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Auction</h4>
+            <p style="margin-bottom: 10px; line-height: 1.8;"><strong>Advantages:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 15px; line-height: 1.8;">
+                <li>Creates urgency and competitive bidding</li>
+                <li>Can achieve premium prices in hot markets</li>
+                <li>Unconditional sale (buyers do due diligence beforehand)</li>
+                <li>Defined timeframe</li>
+            </ul>
+            <p style="margin-bottom: 10px; line-height: 1.8;"><strong>Disadvantages:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>May not reach reserve in slow markets</li>
+                <li>Higher marketing costs</li>
+                <li>Stressful for some vendors</li>
+                <li>Requires extensive pre-auction preparation</li>
+            </ul>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Fixed Price (By Negotiation)</h4>
+            <p style="margin-bottom: 10px; line-height: 1.8;"><strong>Advantages:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 15px; line-height: 1.8;">
+                <li>Buyers know asking price upfront</li>
+                <li>Allows conditional offers (subject to finance, inspection)</li>
+                <li>More flexible negotiation process</li>
+                <li>Lower upfront marketing costs</li>
+            </ul>
+            <p style="margin-bottom: 10px; line-height: 1.8;"><strong>Disadvantages:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>May take longer to sell</li>
+                <li>Offers can fall through during conditional period</li>
+                <li>Risk of underpricing or overpricing</li>
+            </ul>
+
+            <h4 style="font-size: 18px; color: var(--text-dark); margin-top: 25px; margin-bottom: 15px;">Tender</h4>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Sealed bids submitted by deadline</li>
+                <li>No price indication given</li>
+                <li>Vendor can choose best offer (not necessarily highest price)</li>
+                <li>Less common for residential properties</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 4: Pricing Strategy</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;">Work with your real estate agent to determine competitive pricing:</p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Comparative Market Analysis:</strong> Review recent sales of similar properties in your area</li>
+                <li><strong>Current Market Conditions:</strong> Consider whether it's a buyer's or seller's market</li>
+                <li><strong>Property Condition:</strong> Adjust for condition relative to comparables</li>
+                <li><strong>Unique Features:</strong> Premium location, views, quality finishes, land size</li>
+                <li><strong>Days on Market:</strong> Properties priced correctly typically sell within 30-60 days</li>
+            </ul>
+
+            <p style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 20px; color: #856404;"><strong>Pricing Tip:</strong> Overpricing often results in longer time on market and eventually selling below a realistic price. Properties priced correctly from the start typically achieve better results and sell faster.</p>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 5: Marketing Your Property</h3>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Online Listings:</strong> Trade Me Property, realestate.co.nz, agency websites</li>
+                <li><strong>Professional Photography:</strong> Essential for online appeal</li>
+                <li><strong>Signage:</strong> For Sale board with agent contact details</li>
+                <li><strong>Open Homes:</strong> Scheduled viewings for multiple buyers</li>
+                <li><strong>Social Media:</strong> Facebook, Instagram property promotion</li>
+                <li><strong>Print Media:</strong> Local newspapers, property magazines (optional)</li>
+                <li><strong>Email Marketing:</strong> Agent database of active buyers</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 6: Managing Viewings</h3>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li>Keep property clean and tidy at all times</li>
+                <li>Be flexible with viewing times</li>
+                <li>Consider leaving during viewings (buyers speak more freely)</li>
+                <li>Maintain security - valuables secured, alarm system active</li>
+                <li>Pets managed appropriately</li>
+                <li>Let your agent manage communications</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 7: Evaluating and Accepting Offers</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Consider multiple factors beyond just price:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Offer Price:</strong> Highest isn't always best</li>
+                <li><strong>Conditions:</strong> Fewer conditions = less risk of deal falling through</li>
+                <li><strong>Finance Pre-Approval:</strong> Pre-approved buyers less likely to fail finance condition</li>
+                <li><strong>Settlement Date:</strong> Does it align with your timing needs?</li>
+                <li><strong>Deposit Amount:</strong> Higher deposits show commitment</li>
+                <li><strong>Chattels:</strong> What's included/excluded</li>
+            </ul>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Step 8: From Sale to Settlement</h3>
+            <ol style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Conditional Period:</strong> 10-15 days typically for buyer to satisfy conditions</li>
+                <li><strong>Going Unconditional:</strong> Sale becomes legally binding</li>
+                <li><strong>Maintain Insurance:</strong> Keep property fully insured until settlement</li>
+                <li><strong>Maintain Property:</strong> Keep in same condition as at sale</li>
+                <li><strong>Pre-Settlement Inspection:</strong> Buyer conducts final check</li>
+                <li><strong>Settlement Day:</strong> Funds transferred, possession handed over</li>
+            </ol>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Tax Considerations</h3>
+            <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Potential tax obligations when selling property:</strong></p>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Bright-Line Test:</strong> Profit from residential property sold within 2 years (10 years if acquired after March 2021, or 5 years for new builds) may be taxable</li>
+                <li><strong>Main Home Exemption:</strong> Your main home is typically exempt from bright-line tax</li>
+                <li><strong>Investment Properties:</strong> May be subject to income tax on capital gains</li>
+                <li><strong>GST:</strong> Generally not applicable to residential property unless you're a developer or in property business</li>
+            </ul>
+
+            <p style="background: #d1ecf1; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8; margin-bottom: 20px; color: #0c5460;"><strong>Tax Advice:</strong> Tax rules are complex and depend on your specific circumstances. Always consult a qualified accountant or tax advisor before selling to understand your tax obligations.</p>
+
+            <h3 style="font-size: 24px; color: var(--royal-blue); margin-top: 40px; margin-bottom: 20px;">Common Mistakes to Avoid</h3>
+            <ul style="margin-left: 30px; margin-bottom: 20px; line-height: 1.8;">
+                <li><strong>Overpricing:</strong> Leads to extended time on market and lower final sale price</li>
+                <li><strong>Poor Presentation:</strong> First impressions significantly impact buyer interest</li>
+                <li><strong>Inadequate Disclosure:</strong> Can result in legal liability and deal cancellation</li>
+                <li><strong>Emotional Attachment:</strong> Being too attached can cloud judgement on offers</li>
+                <li><strong>Ignoring Agent Advice:</strong> Your agent knows the market - listen to their guidance</li>
+                <li><strong>Refusing Reasonable Offers:</strong> Perfect offers are rare - consider all serious proposals</li>
+                <li><strong>DIY Conveyancing:</strong> Property law is complex - always use a qualified solicitor</li>
+            </ul>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Buy or Sell?</h2>
+            <p>Let's work together to achieve your property goals with confidence and professional guidance.</p>
+            <a href="index.html#contact" class="btn"><i class="fas fa-phone-alt"></i> Get in Touch Today</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Garry Singh Real Estate</h3>
+                <p>Your trusted partner in New Zealand real estate. With 2 years of dedicated service and 10+ satisfied clients, I bring fresh energy, modern insights, and unwavering commitment to helping you make informed property decisions.</p>
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">Garry Singh | Licensed Salesperson | Barfoot & Thompson Ltd | Licensed under REAA 2008</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#properties">Properties</a></li>
+                    <li><a href="market-analysis.html">Market Analysis</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +64 20 4141 9072</li>
+                    <li><i class="fas fa-envelope"></i> Garry.singh@barfoot.co.nz</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Auckland, New Zealand</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Garry Singh Real Estate | www.garryrealestate.co.nz | All Rights Reserved | <a href="admin.html" style="color: rgba(255,255,255,0.4); text-decoration: none; font-size: 11px;">Portal</a></p>
+            <p style="margin-top: 10px; font-size: 12px;">Resource information is provided for general informational purposes only and does not constitute professional advice.</p>
+        </div>
+    </footer>
+</body>
+</html>
