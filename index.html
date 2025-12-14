@@ -543,6 +543,49 @@
             object-fit: cover;
         }
 
+        .property-video-container {
+            height: 280px;
+            position: relative;
+            background: #000;
+        }
+
+        .property-video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .video-play-overlay:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .video-play-overlay i {
+            font-size: 60px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .video-play-overlay:hover i {
+            transform: scale(1.1);
+        }
+
         .property-badge {
             position: absolute;
             top: 20px;
@@ -1377,6 +1420,32 @@
             }
         });
 
+        // Convert YouTube/Vimeo URL to embed URL
+        function getVideoEmbedUrl(url) {
+            if (!url) return null;
+
+            // YouTube patterns
+            const youtubeMatch = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+            if (youtubeMatch) {
+                return `https://www.youtube.com/embed/${youtubeMatch[1]}`;
+            }
+
+            // Vimeo patterns
+            const vimeoMatch = url.match(/(?:vimeo\.com\/)(\d+)/);
+            if (vimeoMatch) {
+                return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+            }
+
+            return null;
+        }
+
+        // Play video in property card
+        function playPropertyVideo(overlay, embedUrl) {
+            const parent = overlay.parentElement;
+            parent.innerHTML = `<iframe src="${embedUrl}?autoplay=1" frameborder="0" allowfullscreen allow="autoplay"></iframe>`;
+            parent.classList.add('property-video-container');
+        }
+
         // Load properties from localStorage when page loads
         function loadProperties() {
             const properties = JSON.parse(localStorage.getItem('garryProperties') || '[]');
@@ -1405,10 +1474,22 @@
                                   property.featured ? 'featured' : '';
 
                 let mediaHtml = '';
-                if (property.videoUrl) {
-                    mediaHtml = `<video class="property-video" controls><source src="${property.videoUrl}" type="video/mp4">Your browser does not support video.</video>`;
-                } else if (property.imageUrl) {
-                    mediaHtml = `<div class="property-image" style="background-image: url('${property.imageUrl}')"></div>`;
+                // Always show image first if available
+                if (property.imageUrl) {
+                    // Check if there's also a video - show play button overlay
+                    const videoOverlay = property.videoUrl ? `
+                        <div class="video-play-overlay" onclick="playPropertyVideo(this, '${getVideoEmbedUrl(property.videoUrl)}')">
+                            <i class="fas fa-play-circle"></i>
+                        </div>` : '';
+                    mediaHtml = `<div class="property-image" style="background-image: url('${property.imageUrl}')">${videoOverlay}</div>`;
+                } else if (property.videoUrl) {
+                    // No image, show video embed directly
+                    const embedUrl = getVideoEmbedUrl(property.videoUrl);
+                    if (embedUrl) {
+                        mediaHtml = `<div class="property-video-container"><iframe src="${embedUrl}" frameborder="0" allowfullscreen></iframe></div>`;
+                    } else {
+                        mediaHtml = `<div class="property-image no-image"></div>`;
+                    }
                 } else {
                     mediaHtml = `<div class="property-image no-image"></div>`;
                 }
