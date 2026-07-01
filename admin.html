@@ -155,10 +155,15 @@
           <div class="field"><label>Email</label><input id="s_email" placeholder="Garry.singh@barfoot.co.nz"></div>
         </div>
         <div class="field"><label>Office / branch</label><input id="s_office" placeholder="Barfoot & Thompson — Beach Haven, Auckland"></div>
+        <p class="note" style="margin:6px 0 10px;">Social media — paste Garry's profile links. Only the ones you fill in will show on the website.</p>
         <div class="grid3">
-          <div class="field"><label>Facebook URL</label><input id="s_facebook" placeholder="https://facebook.com/..."></div>
-          <div class="field"><label>Instagram URL</label><input id="s_instagram" placeholder="https://instagram.com/..."></div>
-          <div class="field"><label>LinkedIn URL</label><input id="s_linkedin" placeholder="https://linkedin.com/in/..."></div>
+          <div class="field"><label><i class="fab fa-facebook"></i> Facebook URL</label><input id="s_facebook" placeholder="https://facebook.com/..."></div>
+          <div class="field"><label><i class="fab fa-instagram"></i> Instagram URL</label><input id="s_instagram" placeholder="https://instagram.com/..."></div>
+          <div class="field"><label><i class="fab fa-linkedin"></i> LinkedIn URL</label><input id="s_linkedin" placeholder="https://linkedin.com/in/..."></div>
+        </div>
+        <div class="grid2">
+          <div class="field"><label><i class="fab fa-youtube"></i> YouTube URL</label><input id="s_youtube" placeholder="https://youtube.com/@..."></div>
+          <div class="field"><label><i class="fab fa-tiktok"></i> TikTok URL</label><input id="s_tiktok" placeholder="https://tiktok.com/@..."></div>
         </div>
         <button class="btn btn-green" id="saveSettingsBtn"><i class="fas fa-check"></i> Save details</button>
         <div id="settingsMsg"></div>
@@ -387,12 +392,15 @@
       $('s_facebook').value = s.facebook || '';
       $('s_instagram').value = s.instagram || '';
       $('s_linkedin').value = s.linkedin || '';
+      $('s_youtube').value = s.youtube || '';
+      $('s_tiktok').value = s.tiktok || '';
     });
   }
   $('saveSettingsBtn').addEventListener('click', function () {
     var obj = {
       phone: $('s_phone').value.trim(), email: $('s_email').value.trim(), office: $('s_office').value.trim(),
-      facebook: $('s_facebook').value.trim(), instagram: $('s_instagram').value.trim(), linkedin: $('s_linkedin').value.trim()
+      facebook: $('s_facebook').value.trim(), instagram: $('s_instagram').value.trim(), linkedin: $('s_linkedin').value.trim(),
+      youtube: $('s_youtube').value.trim(), tiktok: $('s_tiktok').value.trim()
     };
     $('settingsMsg').innerHTML = '<div class="note">Saving…</div>';
     db.collection('settings').doc('site').set(obj, { merge: true })

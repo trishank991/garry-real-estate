@@ -72,7 +72,7 @@
       }
     });
     // social links
-    ['facebook', 'instagram', 'linkedin'].forEach(function (net) {
+    ['facebook', 'instagram', 'linkedin', 'youtube', 'tiktok'].forEach(function (net) {
       var a = document.querySelector('[data-social="' + net + '"]');
       if (a && s[net]) { a.href = s[net]; a.style.display = ''; }
     });
