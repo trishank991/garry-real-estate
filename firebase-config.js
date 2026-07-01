@@ -20,10 +20,11 @@
    ============================================================ */
 
 window.FIREBASE_CONFIG = {
-  apiKey:            "PASTE_API_KEY",
-  authDomain:        "PASTE_PROJECT.firebaseapp.com",
-  projectId:         "PASTE_PROJECT_ID",
-  storageBucket:     "PASTE_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId:             "PASTE_APP_ID"
+  apiKey:            "AIzaSyDC1atUUj3LjBIFsgz9iU5D8GdM9pIvorg",
+  authDomain:        "garry-real-estate-1de7c.firebaseapp.com",
+  projectId:         "garry-real-estate-1de7c",
+  storageBucket:     "garry-real-estate-1de7c.firebasestorage.app",
+  messagingSenderId: "973849236141",
+  appId:             "1:973849236141:web:354d6cecfc282849d02c24",
+  measurementId:     "G-HGHP0W2GKK"
 };
